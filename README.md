@@ -36,25 +36,11 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 
-
-
-
-
-
-
 9.	Click on emulate to start emulation 
 
 
 
-
-
-
-
-
 ![image](https://user-images.githubusercontent.com/36288975/189273273-9bb36ec1-e2e8-4892-8d35-37707332bfdc.png)
-
-
-
 
 
 
@@ -147,11 +133,11 @@ ret
 ## AND Operation
 
 ```
-org 100h
-MOV al,32h;
-MOV bl,[3343h];
-DIV bl;
-MOV [3343h],al;
+org 100H
+MOV [SI],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+AND AX,BX;
 ret
 
 ```
@@ -165,13 +151,12 @@ ret
 ## OR Operation
 
 ```
-org 100h
-MOV al,32h;
-MOV bl,[3343h];
-DIV bl;
-MOV [3343h],al;
+org 100H
+MOV SI,0532H;
+MOV AX,0A32H;
+MOV BX,0B13H;
+OR AX,BX;
 ret
-
 ```
 
 ## Output  
@@ -183,12 +168,13 @@ ret
 ## NOT Operation
 
 ```
-org 100h
-MOV al,32h;
-MOV bl,[3343h];
-DIV bl;
-MOV [3343h],al;
+org 100H
+MOV [SI+4],AX;
+MOV AX,0A32H;
+NOT AX;
+MOV [SI+6],AX;
 ret
+
 
 ```
 
@@ -201,12 +187,13 @@ ret
 ## XOR Operation
 
 ```
-org 100h
-MOV al,32h;
-MOV bl,[3343h];
-DIV bl;
-MOV [3343h],al;
+org 100H
+MOV [SI+2],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+XOR AX,BX;
 ret
+
 
 ```
 

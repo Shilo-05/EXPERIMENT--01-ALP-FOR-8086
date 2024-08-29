@@ -143,6 +143,78 @@ ret
 ![image](https://github.com/user-attachments/assets/a1a48f11-6eb9-4129-94a5-723a18d32efe)
 
 
+
+## AND Operation
+
+```
+org 100h
+MOV al,32h;
+MOV bl,[3343h];
+DIV bl;
+MOV [3343h],al;
+ret
+
+```
+
+## Output  
+
+![image](https://github.com/user-attachments/assets/a1a48f11-6eb9-4129-94a5-723a18d32efe)
+
+
+
+## OR Operation
+
+```
+org 100h
+MOV al,32h;
+MOV bl,[3343h];
+DIV bl;
+MOV [3343h],al;
+ret
+
+```
+
+## Output  
+
+![image](https://github.com/user-attachments/assets/a1a48f11-6eb9-4129-94a5-723a18d32efe)
+
+
+
+## NOT Operation
+
+```
+org 100h
+MOV al,32h;
+MOV bl,[3343h];
+DIV bl;
+MOV [3343h],al;
+ret
+
+```
+
+## Output  
+
+![image](https://github.com/user-attachments/assets/a1a48f11-6eb9-4129-94a5-723a18d32efe)
+
+
+
+## XOR Operation
+
+```
+org 100h
+MOV al,32h;
+MOV bl,[3343h];
+DIV bl;
+MOV [3343h],al;
+ret
+
+```
+
+## Output  
+
+![image](https://github.com/user-attachments/assets/a1a48f11-6eb9-4129-94a5-723a18d32efe)
+
+
 ## Result :
 
  Thus, The ALP for Fundamental Arithmetic and logical operations are executed successfully.
